@@ -39,7 +39,42 @@ body {
 /* Scales the background image to cover the entire area(width) while maintaining aspect ratio */
    background-size: cover;
    background-position: top;
+   position: relative;
    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* clip-path is using the polygon function to create a custom shape */
 
 }
 /* linear-gradient(to right bottom, rgba(126, 213, 111, 0.800), rgba(40, 180, 133, 0.801)): Creates a gradient that transitions from a semi-transparent green to a semi-transparent teal, starting from the top-left corner to the bottom-right corner. */
+
+/* 
+ * The .logo-box class is used to position the logo container within the header.
+ * It uses absolute positioning to place the logo at a specific location.
+ */
+.logo-box {
+    position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
+    top: 40px; /* Position the element 40 pixels from the top of the parent element */
+    left: 40px; /* Position the element 40 pixels from the left of the containing element */
+}
+.logo{
+   height:35px;
+}
+.text-box {
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
+}
+.heading-primary{
+  text-transform: uppercase;
+  color:#fff;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size:20px;
+    letter-spacing: 17.4px;
+}
