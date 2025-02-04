@@ -7,9 +7,9 @@ Dark green: #28b485
 
 */
 
-$primary-color:#55c57a;
-$primary-color-light:#7ed56f;
-$primary-color-dark: #28b485;
+$primary-color : #55c57a;
+$primary-color-light: #7ed56f;
+$primary-color-dark:#28b485;
 $color-white: #fff;
 $color-grey-dark: #777;
 
@@ -30,7 +30,7 @@ body {
     font-weight: 400;
     font-size:1.6rem;
     line-height:1.7;
-    color: $color-grey-dark;
+    color:$color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
 }
@@ -40,7 +40,7 @@ body {
    background-image:linear-gradient(
     to right bottom,
     rgba($primary-color-light, 0.800),
-    rgba($primary-color, 0.800)),
+    rgba($primary-color-dark, 0.800)),
     url(../img/hero.jpg);
 /* Scales the background image to cover the entire area(width) while maintaining aspect ratio */
    background-size: cover;
@@ -73,7 +73,7 @@ body {
 }
 .heading-primary{
   text-transform: uppercase;
-  color:$color-grey-dark;
+  color:$color-white;
   margin-bottom: 6rem;
 }
 .heading-primary--main{
@@ -90,7 +90,7 @@ body {
 }
 .heading-primary--sub{
     display: block;
-    font-size:20px;
+    font-size:2rem;
     letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out;
 }
@@ -131,7 +131,7 @@ body {
     }
     100% {
         opacity: 1;
-        transform: translateY(0px);
+        transform: translateY(0rem);
     }
 }
 
@@ -140,7 +140,7 @@ body {
     text-decoration: none;
     padding:1.5rem 4rem;
     display:inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     translate: all .2s;
     position: relative;
 }
@@ -154,8 +154,8 @@ body {
 }
 
 .btn--white{
-    background-color: #fff;
-    color:$color-grey-dark;
+    background-color: $color-white;
+    color: $color-grey-dark;
 }
 .btn::after{
    content:"";
@@ -177,7 +177,7 @@ body {
     transform: scaleX(1.4) scaleY(1.6);
     opacity:0;
 }
-.btn-animated {
-    animation: moveInBottom .5s ease-out .75s;
+.btn--animated {
+    animation: moveInBottom 0.5s ease-out 0.75s;
     animation-fill-mode: backwards;
 }
