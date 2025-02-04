@@ -11,10 +11,13 @@ Dark green: #28b485
  * The universal selector (*) applies the following styles to all elements on the page.
  * This helps to create a consistent baseline by removing default browser styling.
  */
-* {
+*,*::after,*::before {
     margin: 0; /* Remove default margin from all elements */
     padding: 0; /* Remove default padding from all elements */
-    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5%, 16px is browser default */
 }
 
 /*
@@ -23,10 +26,11 @@ Dark green: #28b485
 body {
     font-family: 'lato', sans-serif;
     font-weight: 400;
-    font-size:16px;
+    font-size:1.6rem;
     line-height:1.7;
     color:#777;
-    padding: 30px;
+    padding: 3rem;
+    box-sizing: border-box;
 }
 
 .header {
@@ -51,11 +55,11 @@ body {
  */
 .logo-box {
     position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
-    top: 40px; /* Position the element 40 pixels from the top of the parent element */
-    left: 40px; /* Position the element 40 pixels from the left of the containing element */
+    top: 4rem; /* Position the element 40 pixels from the top of the parent element */
+    left: 4rem; /* Position the element 40 pixels from the left of the containing element */
 }
 .logo{
-   height:35px;
+   height:3.5rem;
 }
 .text-box {
     position: absolute;
@@ -68,13 +72,13 @@ body {
 .heading-primary{
   text-transform: uppercase;
   color:#fff;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 .heading-primary-main{
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 700;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; /*ease-in starts slows and ending fastly*/
@@ -85,7 +89,7 @@ body {
 .heading-primary-sub{
     display: block;
     font-size:20px;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out;
 }
 
@@ -121,7 +125,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
     100% {
         opacity: 1;
@@ -132,19 +136,19 @@ body {
 .btn:link, .btn:visited{
     text-transform: uppercase;
     text-decoration: none;
-    padding:15px 40px;
+    padding:1.5rem 4rem;
     display:inline-block;
     border-radius: 100px;
     translate: all .2s;
     position: relative;
 }
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 .btn:active{
-    transform:translateY(-1px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform:translateY(-.1rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 
 .btn-white{
@@ -156,7 +160,7 @@ body {
    display:inline-block;
    height: 100%;
    width: 100%;
-   border-radius: 100px;
+   border-radius: 10rem;
    position: absolute;
    top:0;
    left:0;
