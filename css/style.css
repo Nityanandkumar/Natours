@@ -63,10 +63,12 @@ body {
     top:40%;
     transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
     backface-visibility: hidden;
+    text-align: center;
 }
 .heading-primary{
   text-transform: uppercase;
   color:#fff;
+  margin-bottom: 60px;
 }
 .heading-primary-main{
     display: block;
@@ -86,6 +88,7 @@ body {
     letter-spacing: 17.4px;
     animation: moveInRight 1s ease-out;
 }
+
 
 /*Animations */
 
@@ -114,4 +117,26 @@ body {
         opacity: 1;
         transform: translateX(0%);
     }
+}
+
+.btn:link, .btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding:15px 40px;
+    display:inline-block;
+    border-radius: 100px;
+    translate: all .2s;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.btn:active{
+    transform:translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color:#777;
 }
