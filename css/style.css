@@ -62,6 +62,7 @@ body {
     left:50%;
     top:40%;
     transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
+    backface-visibility: hidden;
 }
 .heading-primary{
   text-transform: uppercase;
@@ -72,9 +73,45 @@ body {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; /*ease-in starts slows and ending fastly*/
+
+    /* animation-delay: 3s;
+    animation-iteration-count: 3; */
 }
 .heading-primary-sub{
     display: block;
     font-size:20px;
     letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+}
+
+/*Animations */
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    80% {
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    80% {
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
 }
