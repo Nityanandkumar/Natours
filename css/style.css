@@ -53,15 +53,15 @@ body {
  * The .logo-box class is used to position the logo container within the header.
  * It uses absolute positioning to place the logo at a specific location.
  */
-.logo-box {
+.header__logo-box {
     position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
     top: 4rem; /* Position the element 40 pixels from the top of the parent element */
     left: 4rem; /* Position the element 40 pixels from the left of the containing element */
 }
-.logo{
+.header__logo{
    height:3.5rem;
 }
-.text-box {
+.header__text-box {
     position: absolute;
     left:50%;
     top:40%;
@@ -74,7 +74,7 @@ body {
   color:#fff;
   margin-bottom: 6rem;
 }
-.heading-primary-main{
+.heading-primary--main{
     display: block;
     font-size: 6rem;
     font-weight: 700;
@@ -86,7 +86,7 @@ body {
     /* animation-delay: 3s;
     animation-iteration-count: 3; */
 }
-.heading-primary-sub{
+.heading-primary--sub{
     display: block;
     font-size:20px;
     letter-spacing: 1.74rem;
@@ -151,7 +151,7 @@ body {
     box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
 }
 
-.btn-white{
+.btn--white{
     background-color: #fff;
     color:#777;
 }
@@ -168,7 +168,7 @@ body {
    transition : all .4s;
 }
 
-.btn-white::after{
+.btn--white::after{
     background-color: #fff;
 }
 .btn:hover::after{
