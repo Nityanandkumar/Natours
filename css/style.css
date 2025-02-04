@@ -1,0 +1,45 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* 
+ * The universal selector (*) applies the following styles to all elements on the page.
+ * This helps to create a consistent baseline by removing default browser styling.
+ */
+* {
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+/*
+ * Mentioning some default styles in body tag to inherit for the rest of the element selectors
+ */
+body {
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size:16px;
+    line-height:1.7;
+    color:#777;
+    padding: 30px;
+}
+
+.header {
+    height: 95vh; /* The element will occupy 95% of the viewport height */
+   background-image:linear-gradient(
+    to right bottom,
+    rgba(126, 213, 111, 0.800),
+    rgba(40, 180, 133, 0.800)),
+    url(../img/hero.jpg);
+/* Scales the background image to cover the entire area(width) while maintaining aspect ratio */
+   background-size: cover;
+   background-position: top;
+   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* clip-path is using the polygon function to create a custom shape */
+
+}
+/* linear-gradient(to right bottom, rgba(126, 213, 111, 0.800), rgba(40, 180, 133, 0.801)): Creates a gradient that transitions from a semi-transparent green to a semi-transparent teal, starting from the top-left corner to the bottom-right corner. */
