@@ -109,11 +109,32 @@ body {
   text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.paragraph {
+  font-size: 1.6rem;
+}
+.paragraph:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
 .u-center-text {
   text-align: center;
 }
 
-.u-margin-bottom {
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem;
+}
+
+.u-margin-bottom-middle {
+  margin-bottom: 4rem;
+}
+
+.u-margin-bottom-large {
   margin-bottom: 8rem;
 }
 
@@ -125,6 +146,7 @@ body {
   border-radius: 10rem;
   translate: all 0.2s;
   position: relative;
+  font-size: 1.6rem;
 }
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -162,6 +184,26 @@ body {
   animation-fill-mode: backwards;
 }
 
+.btn-text:link, .btn-text:visited {
+  font-size: 1.6rem;
+  color: #55c57a;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  padding: 0.3rem;
+  transition: all 0.2s;
+}
+.btn-text:hover {
+  background-color: #55c57a;
+  color: #fff;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-0.2rem);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0);
+}
+
 .header {
   height: 95vh; /* The element will occupy 95% of the viewport height */
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
@@ -186,6 +228,28 @@ body {
   transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
   backface-visibility: hidden;
   text-align: center;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+.row:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row [class^=col-] {
+  float: left;
+}
+.row [class^=col-]:not(:last-child) {
+  margin-right: 2rem;
+}
+.row .col-1-of-2 {
+  width: calc((100% - 2rem) / 2);
 }
 
 .section-about {
