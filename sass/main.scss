@@ -12,6 +12,7 @@ $primary-color-light: #7ed56f;
 $primary-color-dark:#28b485;
 $color-white: #fff;
 $color-grey-dark: #777;
+$color-back: #000;
 
  *,*::after,*::before {
     margin: 0; /* Remove default margin from all elements */
@@ -48,35 +49,30 @@ body {
    position: relative;
    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* clip-path is using the polygon function to create a custom shape */
 
-}
-/* linear-gradient(to right bottom, rgba(126, 213, 111, 0.800), rgba(40, 180, 133, 0.801)): Creates a gradient that transitions from a semi-transparent green to a semi-transparent teal, starting from the top-left corner to the bottom-right corner. */
-
-/* 
- * The .logo-box class is used to position the logo container within the header.
- * It uses absolute positioning to place the logo at a specific location.
- */
-.header__logo-box {
+   &__logo-box {
     position: absolute; /* Position the element absolutely within its nearest positioned ancestor */
     top: 4rem; /* Position the element 40 pixels from the top of the parent element */
     left: 4rem; /* Position the element 40 pixels from the left of the containing element */
+   }
+    &__logo{
+    height:3.5rem;
+    }
+    &__text-box {
+        position: absolute;
+        left:50%;
+        top:40%;
+        transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
+        backface-visibility: hidden;
+        text-align: center;
+    }
 }
-.header__logo{
-   height:3.5rem;
-}
-.header__text-box {
-    position: absolute;
-    left:50%;
-    top:40%;
-    transform: translate(-50%, -50%); /*This moves the element by 50% of its own width to the left and 50% of its own height up */
-    backface-visibility: hidden;
-    text-align: center;
-}
+
 .heading-primary{
   text-transform: uppercase;
   color:$color-white;
   margin-bottom: 6rem;
-}
-.heading-primary--main{
+
+   &--main{
     display: block;
     font-size: 6rem;
     font-weight: 700;
@@ -87,13 +83,15 @@ body {
 
     /* animation-delay: 3s;
     animation-iteration-count: 3; */
+    }
+    &--sub{
+        display: block;
+        font-size:2rem;
+        letter-spacing: 1.74rem;
+        animation: moveInRight 1s ease-out;
+    }
 }
-.heading-primary--sub{
-    display: block;
-    font-size:2rem;
-    letter-spacing: 1.74rem;
-    animation: moveInRight 1s ease-out;
-}
+
 
 
 /*Animations */
@@ -135,49 +133,53 @@ body {
     }
 }
 
-.btn:link, .btn:visited{
-    text-transform: uppercase;
-    text-decoration: none;
-    padding:1.5rem 4rem;
-    display:inline-block;
-    border-radius: 10rem;
-    translate: all .2s;
-    position: relative;
-}
-.btn:hover {
-    transform: translateY(-.3rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-}
-.btn:active{
-    transform:translateY(-.1rem);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-}
+.btn {
+    &:link, &:visited{
+        text-transform: uppercase;
+        text-decoration: none;
+        padding:1.5rem 4rem;
+        display:inline-block;
+        border-radius: 10rem;
+        translate: all .2s;
+        position: relative;
+    }
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba($color-back,0.2);
 
-.btn--white{
-    background-color: $color-white;
-    color: $color-grey-dark;
-}
-.btn::after{
-   content:"";
-   display:inline-block;
-   height: 100%;
-   width: 100%;
-   border-radius: 10rem;
-   position: absolute;
-   top:0;
-   left:0;
-   z-index: -1;
-   transition : all .4s;
-}
+        &::after{
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity:0;
+        }
+    }
+    &:active{
+        transform:translateY(-.1rem);
+        box-shadow: 0 1rem 2rem rgba($color-back,0.2);
+    }
+    
+    &--white{
+        background-color: $color-white;
+        color: $color-grey-dark;
 
-.btn--white::after{
-    background-color: $color-white;
-}
-.btn:hover::after{
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity:0;
-}
-.btn--animated {
-    animation: moveInBottom 0.5s ease-out 0.75s;
-    animation-fill-mode: backwards;
+        &::after{
+            background-color: $color-white;
+        }
+    }
+    &::after{
+       content:"";
+       display:inline-block;
+       height: 100%;
+       width: 100%;
+       border-radius: 10rem;
+       position: absolute;
+       top:0;
+       left:0;
+       z-index: -1;
+       transition : all .4s;
+    }
+    
+    &--animated {
+        animation: moveInBottom 0.5s ease-out 0.75s;
+        animation-fill-mode: backwards;
+    }
 }
