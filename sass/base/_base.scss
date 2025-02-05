@@ -1,0 +1,12 @@
+*,*::after,*::before {
+    margin: 0; /* Remove default margin from all elements */
+    padding: 0; /* Remove default padding from all elements */
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%; /* 1rem = 10px; 10px/16px = 62.5%, 16px is browser default */
+}
+
+body {
+    box-sizing: border-box;
+}
