@@ -34,4 +34,21 @@
           letter-spacing: 1.74rem;
           animation: moveInRight 1s ease-out;
       }
-  }
+}
+
+.heading-secondary{
+    font-size:3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    background-image: linear-gradient(to right, $primary-color-light,$primary-color-dark);
+    -webkit-background-clip: text; /*background image visible only on the text in WebKit browsers */
+    background-clip: text;/*background image visible only on the text in other browsers */
+    color: transparent;/*text itself transparent so that only the background image is visible */
+    letter-spacing: .2rem;
+    transition: all .2s;
+    &:hover{
+        transform: skewY(2deg) skewX(15deg) scale(1.1);
+        text-shadow: .5rem 1rem 2rem rgba($color-back, .2);
+    }
+}
