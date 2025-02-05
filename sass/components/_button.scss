@@ -12,7 +12,7 @@
     }
     &:hover {
         transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-back,0.2);
+        box-shadow: 0 1rem 2rem rgba($color-black,0.2);
 
         &::after{
             transform: scaleX(1.4) scaleY(1.6);
@@ -21,7 +21,7 @@
     }
     &:active{
         transform:translateY(-.1rem);
-        box-shadow: 0 1rem 2rem rgba($color-back,0.2);
+        box-shadow: 0 1rem 2rem rgba($color-black,0.2);
     }
     
     &--white{
@@ -64,11 +64,11 @@
     &:hover{
         background-color: $primary-color;
         color: $color-white;
-        box-shadow: 0 1rem 2rem rgba($color-back, .15);
+        box-shadow: 0 1rem 2rem rgba($color-black, .15);
         transform: translateY(-.2rem);
     }
     &:active{
-        box-shadow: 0 .5rem 1rem rgba($color-back, .15);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .15);
         transform: translateY(0);
     }
 }
